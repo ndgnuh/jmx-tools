@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jmx-tools"
+version = "0.1.10"
+dependencies = [
+	"pyyaml",
+	"pandas",
+	"braceexpand",
+	"fastapi",
+	"uvicorn",
+	"requests"
+]
+
+[tool.setuptools.package-dir]
+jmx_tools = "src"
+
+[project.scripts]
+jmx-tools = "jmx_tools.__main__:main"
